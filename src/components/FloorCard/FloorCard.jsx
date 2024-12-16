@@ -1,48 +1,54 @@
-import React from 'react'
-import "./style.css"
+import React from "react";
+import "./style.css";
+import { Link } from "react-router-dom";
+
 const FloorCard = () => {
   return (
     <div>
       <main>
-      <div class="main">
-        <div class="main_conteiner">
-          <div class="inConteiner">
-            <a href="./first/indes.html">
-              <div class="floor_bloks1">
-                <h1>First floor</h1>
-              </div>
-            </a>
-            <a href="./second/index.html">
-              <div class="floor_bloks2">
-                <h1>Second floor</h1>
-              </div>
-            </a>
+        <section className="main">
+          <div className="main_conteiner">
+            <div className="inConteiner">
+              <article className="floor_bloks1">
+                <Link to="/first">
+                  <h2>First floor</h2>
+                </Link>
+              </article>
+
+              <article className="floor_bloks2">
+                <Link to="/second">
+                  <h2>Second floor</h2>
+                </Link>
+              </article>
+            </div>
+
+            <div className="inConteiner">
+              <article className="floor_bloks3">
+                <Link to="/third">
+                  <h2>Third floor</h2>
+                </Link>
+              </article>
+
+              <article className="floor_bloks4">
+                <Link to="/fourth">
+                  <h2>Fourth floor</h2>
+                </Link>
+              </article>
+            </div>
           </div>
-          <div class="inConteiner">
-            <a href="./third/index.html">
-              <div class="floor_bloks3">
-                <h1>Third floor</h1>
-              </div>
-            </a>
-            <a href="./fourth/index.html">
-              <div class="floor_bloks4">
-                <h1>Fourth floor</h1>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="Ground_floor">
-        <a href="#">
-          <div class="about_us">
-            `
-            <h1>Ground floor</h1>
-          </div>
-        </a>
-      </div>
-    </main>
+        </section>
+
+        <section className="Ground_floor">
+          <article className="about_us">
+            <Link to="/ground">
+              <h2>Ground floor</h2>
+            </Link>
+          </article>
+        </section>
+      </main>
     </div>
-  )
-}
+  );
+};
 
 export default FloorCard;
+
